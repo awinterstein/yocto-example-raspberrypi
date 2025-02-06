@@ -2,3 +2,4 @@
 /meta-*/
 /poky/
 !/meta-project/
+!/meta-swupdate-raspberrypi

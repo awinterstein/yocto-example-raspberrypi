@@ -14,7 +14,7 @@ machine: raspberrypi0-2w-64
 distro: poky
 
 # The bitbake target to be built for this project.
-target: core-image-base
+target: update-image
 
 repos:
   # This entry includes the repository where the config file is located
@@ -23,6 +23,7 @@ repos:
   meta-custom:
     layers:
       meta-project:
+      meta-swupdate-raspberrypi:
 
   # The layers of Poky to be included in the bblayers.conf.
   poky:
@@ -44,5 +45,10 @@ repos:
 
   # The board support package for the Raspberry Pi.
   meta-raspberrypi:
-   url: https://github.com/agherzan/meta-raspberrypi.git
-   commit: 6df7e028a2b7b2d8cab0745dc0ed2eebc3742a17
+    url: https://github.com/agherzan/meta-raspberrypi.git
+    commit: 6df7e028a2b7b2d8cab0745dc0ed2eebc3742a17
+
+  # The SWUpdate deploy tool.
+  meta-swupdate:
+    url: https://github.com/sbabic/meta-swupdate.git
+    commit: d598d4e675b541301ea1dfc8f0c8931983b4dcd0
