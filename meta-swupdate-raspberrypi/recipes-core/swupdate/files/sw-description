@@ -1,6 +1,6 @@
 software =
 {
-    version = "@@DISTRO_VERSION@@";
+    version = "@@IMAGE_VERSION@@";
 
     @@MACHINE@@ = {
         hardware-compatibility: [ "1.0"];
